@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Claude, Claude Code, LLM, AI LinkedIn outreach, Pipeline Sprint, 1st degree connections, Sales Edge Creators">
+  <title>LinkedIn Pipeline Activation Sprint · Sales Edge Creators</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pink:       #C2185B;
+      --pink-mid:   #D81B60;
+      --pink-light: #F8BBD9;
+      --pink-bg:    #fdf0f5;
+      --teal:       #1B6B78;
+      --teal-mid:   #2D8A98;
+      --teal-light: #E0F4F6;
+      --navy:       #1a1a3e;
+      --text:       #374151;
+      --muted:      #6B7280;
+      --soft:       #9CA3AF;
+      --bg:         #ffffff;
+      --bg-soft:    #f8f8fc;
+      --border:     #E5E7EB;
+      --grad-pink:  linear-gradient(135deg, #C2185B 0%, #7B1FA2 100%);
+      --grad-teal:  linear-gradient(135deg, #1B6B78 0%, #0D3B45 100%);
+      --grad-hero:  linear-gradient(135deg, #5B21B6 0%, #1B6B78 100%);
+      --shadow-sm:  0 2px 8px rgba(0,0,0,0.06);
+      --shadow-md:  0 4px 24px rgba(0,0,0,0.09);
+      --shadow-lg:  0 8px 48px rgba(0,0,0,0.12);
+      --radius:     16px;
+      --radius-sm:  10px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Nunito', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-size: 19px;
+      font-weight: 900;
+      color: var(--navy);
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+    .nav-logo span { color: var(--pink); }
+    .nav-cta {
+      background: var(--teal);
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 12px 26px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .nav-cta:hover { background: #0D3B45; transform: translateY(-1px); }
+
+    /* ─── LAYOUT ─── */
+    .wrap        { max-width: 1080px; margin: 0 auto; padding: 0 36px; }
+    .wrap-narrow { max-width: 760px;  margin: 0 auto; padding: 0 36px; }
+
+    /* ─── UTILITIES ─── */
+    section { padding: 88px 0; }
+
+    .dot-bg {
+      background-image: radial-gradient(circle, #D1D5DB 1.2px, transparent 1.2px);
+      background-size: 26px 26px;
+    }
+
+    .pill {
+      display: inline-block;
+      background: var(--pink-bg);
+      color: var(--pink);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      padding: 6px 18px;
+      border-radius: 999px;
+      margin-bottom: 22px;
+    }
+
+    .section-tag {
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      color: var(--pink);
+      margin-bottom: 14px;
+    }
+
+    /* ─── GRADIENT TEXT ─── */
+    .grad-text {
+      background: var(--grad-pink);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .teal-text  { color: var(--teal-mid); }
+    .pink-text  { color: var(--pink); }
+
+    /* ─── HEADINGS ─── */
+    h1 {
+      font-size: clamp(34px, 5.5vw, 58px);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--navy);
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: clamp(26px, 4vw, 42px);
+      font-weight: 900;
+      line-height: 1.18;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    h4 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+
+    /* ─── BODY COPY ─── */
+    .body-text { color: var(--muted); font-size: 17px; line-height: 1.85; }
+    .body-text p { margin-bottom: 18px; }
+    .body-text p:last-child { margin-bottom: 0; }
+    .body-text strong { color: var(--navy); font-weight: 700; }
+
+    .lede {
+      font-size: 20px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+
+    /* ─── CLIFFHANGER ─── */
+    .cliff {
+      display: block;
+      font-size: 19px;
+      font-style: italic;
+      font-weight: 700;
+      text-align: center;
+      margin: 52px auto;
+      line-height: 1.6;
+      max-width: 600px;
+      background: var(--grad-pink);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ─── DIVIDER ─── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 56px 0;
+    }
+
+    /* ─── BUTTONS ─── */
+    .btn-pink {
+      display: inline-block;
+      background: var(--pink);
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      padding: 17px 38px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(194,24,91,0.28);
+    }
+    .btn-pink:hover { background: #A31549; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(194,24,91,0.36); }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--navy);
+      font-family: 'Nunito', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 15px 32px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: 2px solid var(--border);
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--pink); color: var(--pink); }
+
+    .btn-white {
+      display: inline-block;
+      background: #fff;
+      color: var(--navy);
+      font-family: 'Nunito', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      padding: 17px 38px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.14);
+    }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.20); }
+
+    .btn-ghost {
+      display: inline-block;
+      background: transparent;
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 15px 32px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: 2px solid rgba(255,255,255,0.4);
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.7); }
+
+    /* ─── HERO ─── */
+    #hero {
+      padding: 80px 0 72px;
+      position: relative;
+      overflow: hidden;
+      background: var(--bg);
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      right: -150px; top: -100px;
+      width: 640px; height: 640px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(194,24,91,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    #hero::after {
+      content: '';
+      position: absolute;
+      left: -100px; bottom: -80px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(27,107,120,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .hero-divider {
+      width: 72px; height: 3px;
+      background: var(--grad-pink);
+      border-radius: 2px;
+      margin: 20px 0 28px;
+    }
+
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .hero-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .hero-card-top {
+      background: var(--grad-hero);
+      padding: 28px 32px;
+      color: #fff;
+    }
+    .hero-card-top .label {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 10px;
+    }
+    .hero-card-top h4 {
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+    .hero-card-body { padding: 28px 32px; }
+    .hero-stat {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-stat-num { font-size: 48px; font-weight: 900; color: var(--pink); letter-spacing: -0.03em; line-height: 1; }
+    .hero-stat-label { font-size: 14px; font-weight: 700; color: var(--muted); }
+
+    .mini-list { list-style: none; }
+    .mini-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 14px; font-weight: 700; color: var(--text);
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .mini-list li:last-child { border-bottom: none; }
+    .mini-list .ck { color: var(--teal); font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+
+    /* ─── STATS STRIP ─── */
+    .stats-strip {
+      background: var(--navy);
+      padding: 44px 0;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+    .stat-num   { font-size: 34px; font-weight: 900; color: var(--pink-light); letter-spacing: -0.02em; line-height: 1; margin-bottom: 6px; }
+    .stat-label { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.55); }
+
+    /* ─── PROBLEM ─── */
+    #problem { background: var(--bg-soft); }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    /* ─── GATES ─── */
+    .gates-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 44px 0;
+    }
+    .gate-card {
+      background: var(--bg);
+      border-radius: var(--radius-sm);
+      padding: 28px 24px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+    }
+    .gate-num-badge {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--pink-bg);
+      border: 2px solid var(--pink-light);
+      color: var(--pink);
+      font-size: 18px;
+      font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .gate-card h4 { font-size: 16px; margin-bottom: 8px; color: var(--navy); }
+    .gate-card p  { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+    /* ─── PULL QUOTE ─── */
+    .pull-quote {
+      background: var(--bg-soft);
+      border-left: 4px solid var(--pink);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 24px 28px;
+      margin: 36px 0;
+    }
+    .pull-quote p {
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.65;
+    }
+
+    /* ─── DELIVERABLES ─── */
+    #sprint { background: var(--bg); }
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .deliv-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .deliv-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .deliv-card-top {
+      padding: 20px 24px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .deliv-num {
+      display: inline-block;
+      background: var(--pink-bg);
+      color: var(--pink);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    .deliv-card-top h4 { font-size: 17px; }
+    .deliv-card-body { padding: 20px 24px; }
+    .deliv-card-body p { font-size: 14px; color: var(--muted); line-height: 1.75; }
+
+    /* ─── INTELLIGENCE FILES ─── */
+    .intel-files {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin: 24px 0;
+    }
+    .intel-file {
+      background: linear-gradient(135deg, #1a1a3e 0%, #2d1b5e 100%);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+    }
+    .intel-file-name {
+      font-size: 12px; font-weight: 900; color: #a78bfa;
+      font-family: 'Courier New', monospace; margin-bottom: 4px;
+    }
+    .intel-file-desc {
+      font-size: 12px; color: rgba(255,255,255,0.6); font-weight: 600; line-height: 1.4;
+    }
+    .intel-box {
+      background: linear-gradient(135deg, #1a1a3e 0%, #0d3b45 100%);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      margin: 36px 0;
+      color: #fff;
+    }
+    .intel-box h4 { color: #fff; font-size: 18px; margin-bottom: 12px; }
+    .intel-box p { color: rgba(255,255,255,0.75); font-size: 15px; margin-bottom: 14px; }
+    .intel-box p:last-of-type { margin-bottom: 0; }
+
+    /* ─── POOLS ─── */
+    #pools { background: var(--bg-soft); }
+    .pools-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 44px;
+    }
+    .pool-card {
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      border: 1px solid var(--border);
+    }
+    .pool-card.warm { background: var(--pink-bg); border-color: var(--pink-light); }
+    .pool-card.cold { background: var(--teal-light); border-color: #B2DFDB; }
+    .pool-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    .pool-card.warm .pool-badge { background: var(--pink); color: #fff; }
+    .pool-card.cold .pool-badge { background: var(--teal); color: #fff; }
+    .pool-card h4 { font-size: 20px; margin-bottom: 14px; }
+    .pool-card.warm h4 { color: var(--pink); }
+    .pool-card.cold h4 { color: var(--teal); }
+    .pool-card p { font-size: 15px; color: var(--text); line-height: 1.8; }
+
+    /* ─── QUALIFICATION ─── */
+    #who { background: var(--bg); }
+    .who-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 44px;
+    }
+    .qual-box {
+      background: var(--bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .qual-box-header {
+      padding: 18px 24px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .qual-box.yes .qual-box-header { background: var(--teal); color: #fff; }
+    .qual-box.no  .qual-box-header { background: var(--pink-bg); color: var(--pink); }
+    .qual-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 24px;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .qual-item:last-child { border-bottom: none; }
+    .qual-icon { font-size: 15px; flex-shrink: 0; margin-top: 2px; }
+    .qual-box.yes .qual-icon { color: var(--teal); }
+    .qual-box.no  .qual-icon { color: var(--pink); }
+
+    /* ─── WHY NOW ─── */
+    #timing { background: var(--bg-soft); }
+
+    /* ─── PRICING ─── */
+    #pricing { background: var(--bg); }
+    .price-hero {
+      background: var(--grad-hero);
+      border-radius: var(--radius);
+      padding: 56px 48px;
+      text-align: center;
+      margin-bottom: 36px;
+      position: relative;
+      overflow: hidden;
+    }
+    .price-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .price-hero h3 { color: rgba(255,255,255,0.7); font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 12px; }
+    .price-hero .amount { font-size: 80px; font-weight: 900; color: #fff; letter-spacing: -0.03em; line-height: 1; }
+    .price-hero .period { font-size: 18px; color: rgba(255,255,255,0.65); font-weight: 600; margin-bottom: 20px; }
+    .price-hero p { font-size: 16px; color: rgba(255,255,255,0.75); line-height: 1.8; max-width: 560px; margin: 0 auto; position: relative; z-index: 1; }
+    .price-hero .amount, .price-hero .period, .price-hero h3 { position: relative; z-index: 1; }
+
+    .price-includes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 36px 0;
+    }
+    .pi-card {
+      background: var(--bg-soft);
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      border: 1px solid var(--border);
+    }
+    .pi-card .icon { font-size: 24px; margin-bottom: 10px; display: block; }
+    .pi-card p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+    .tiers-label {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--pink);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .tier-cards {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-bottom: 44px;
+    }
+    .tier-card {
+      background: var(--bg);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      padding: 20px 16px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+    .tier-card.featured {
+      border-color: var(--pink);
+      box-shadow: 0 4px 20px rgba(194,24,91,0.15);
+    }
+    .tier-card .t-num { font-size: 10px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--soft); margin-bottom: 8px; }
+    .tier-card h4 { font-size: 13px; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+    .tier-card .t-price { font-size: 17px; font-weight: 900; color: var(--pink); margin-bottom: 8px; }
+    .tier-card.featured .t-price { color: var(--pink); }
+    .tier-card p { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+    .projections {
+      background: var(--bg-soft);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      margin: 36px 0;
+    }
+    .proj-header {
+      background: var(--navy);
+      padding: 16px 28px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      display: flex;
+      justify-content: space-between;
+    }
+    .proj-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 28px;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+    }
+    .proj-row:last-child { border-bottom: none; }
+    .proj-row.highlight { background: var(--pink-bg); }
+    .proj-label { color: var(--muted); font-weight: 600; }
+    .proj-val   { color: var(--navy); font-weight: 800; font-size: 16px; }
+    .proj-row.highlight .proj-val { color: var(--pink); font-size: 18px; }
+
+    /* ─── CTA BANNER ─── */
+    #cta {
+      background: var(--grad-hero);
+      padding: 96px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.055) 1px, transparent 1px);
+      background-size: 26px 26px;
+    }
+    #cta h2 { color: #fff; position: relative; z-index: 1; margin-bottom: 12px; }
+    #cta .sub { color: rgba(255,255,255,0.72); font-size: 18px; font-weight: 600; margin-bottom: 40px; position: relative; z-index: 1; max-width: 540px; margin-left: auto; margin-right: auto; }
+    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+    .cta-note { font-size: 14px; color: rgba(255,255,255,0.5); margin-top: 20px; position: relative; z-index: 1; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--navy);
+      padding: 44px 32px;
+      text-align: center;
+    }
+    .footer-logo { font-size: 18px; font-weight: 900; color: #fff; margin-bottom: 10px; }
+    .footer-logo span { color: var(--pink-light); }
+    footer p { font-size: 14px; color: rgba(255,255,255,0.4); }
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    footer a:hover { color: var(--pink-light); }
+
+
+    /* OFFER BAR */
+    .offer-bar { background: linear-gradient(135deg, #1a1a3e 0%, #0d3b45 100%); padding: 14px 40px; display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .offer-bar-title { font-size: 21px; font-weight: 900; color: #fff; letter-spacing: -0.4px; }
+    .offer-bar-title span { color: #81E8C3; }
+    .offer-bar-sub { font-size: 12px; color: rgba(255,255,255,0.5); font-weight: 600; margin-top: 2px; }
+    .offer-bar-link { font-size: 12px; font-weight: 800; color: rgba(255,255,255,0.65); text-decoration: none; border: 1px solid rgba(255,255,255,0.22); padding: 5px 14px; border-radius: 50px; transition: all 0.2s; white-space: nowrap; }
+    .offer-bar-link:hover { color: #fff; border-color: rgba(255,255,255,0.55); }
+
+    /* JUMP NAV */
+    .jump-nav { background: #f0f8f8; border-bottom: 2px solid #c0dde0; padding: 0 20px; display: flex; align-items: center; gap: 6px; overflow-x: auto; scrollbar-width: none; height: 56px; }
+    .jump-nav::-webkit-scrollbar { display: none; }
+    .jump-nav a { font-size: 13px; font-weight: 800; color: var(--navy); text-decoration: none; white-space: nowrap; padding: 7px 16px; border-radius: 50px; border: 1.5px solid #b8dde0; background: #fff; transition: background 0.15s, color 0.15s, border-color 0.15s; }
+    .jump-nav a:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
+
+    /* PHONE ROW */
+    .phone-row { display: flex; gap: 28px; flex-wrap: wrap; justify-content: center; }
+    .phone-item a { color: rgba(255,255,255,0.82); text-decoration: none; font-weight: 700; font-size: 14px; }
+    .phone-item a:hover { color: #fff; }
+    .phone-item small { display: block; font-size: 11px; color: rgba(255,255,255,0.38); text-align: center; margin-top: 2px; }
+
+    /* ─── MOBILE ─── */
+    /* NAV EXTRAS */
+    .nav-extras { display: flex; gap: 16px; align-items: center; }
+    .nav-secondary { display: inline-block; }
+
+    @media (max-width: 900px) {
+      .nav-extras { display: none; }
+      .nav-secondary { display: none; }
+      nav { padding: 14px 20px; }
+      .hero-grid, .problem-grid, .pools-grid, .who-grid { grid-template-columns: 1fr; }
+      .hero-card { display: none; }
+      .gates-grid { grid-template-columns: 1fr; }
+      .deliverables-grid { grid-template-columns: 1fr 1fr; }
+      .tier-cards { grid-template-columns: 1fr 1fr; }
+      .price-includes { grid-template-columns: 1fr 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 540px) {
+      .jump-nav a { font-size: 11px; padding: 5px 10px; }
+      .jump-nav { gap: 4px; }
+      .offer-bar { padding: 10px 16px; }
+      .offer-bar-title { font-size: 15px; }
+      .intel-box { padding: 24px 20px; }
+      .deliverables-grid, .tier-cards, .price-includes { grid-template-columns: 1fr; }
+      h1 { font-size: 30px; }
+      h2 { font-size: 24px; }
+      .price-hero .amount { font-size: 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- OFFER NAME BAR -->
+<div class="offer-bar">
+  <div>
+    <div class="offer-bar-title">LinkedIn Pipeline <span>Activation Sprint</span></div>
+    <div class="offer-bar-sub">Sales Edge Creators &nbsp;&#183;&nbsp; AI-Powered Outreach from Your 1st Degree Connections</div>
+  </div>
+  <a href="SEC-Revenue-Accelerator-Landing.html" class="offer-bar-link">Also: Revenue Accelerator &rarr;</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Sales Edge <span>Creators</span></a>
+  <div class="nav-extras"><a href="#about" style="font-size:13px;font-weight:700;color:var(--muted);text-decoration:none;">About Us</a><a href="#contact" style="font-size:13px;font-weight:700;color:var(--muted);text-decoration:none;">Contact</a></div><div style="display:flex;gap:8px;align-items:center;"><a href="SEC-Book-A-Call.html" class="nav-cta" style="background:var(--teal);">Get Started &rarr;</a><a href="https://calendly.com/oneaway/eclub" class="nav-cta nav-secondary" style="background:transparent;color:var(--navy);border:2px solid var(--border);" target="_blank">Book a Call</a></div>
+</nav>
+<!-- JUMP NAV -->
+<div class="jump-nav">
+  <a href="#problem">The Problem</a>
+  <a href="#sprint">How It Works</a>
+  <a href="#pools">Your Network</a>
+  <a href="#who">Is This For You</a>
+  <a href="#timing">Why Now</a>
+  <a href="#pricing">Pricing</a>
+</div>
+
+
+<!-- HERO -->
+<section id="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+
+      <div>
+        <span class="pill">LinkedIn Pipeline Activation Sprint</span>
+        <h1>You already have buyers in your LinkedIn Network.<br><span class="grad-text">Your 1st degree connections.</span></h1>
+        <div class="hero-divider"></div>
+        <p class="lede">Most business owners never identify them properly. We go through your connections, filter your exact ICP, and reach them at the point of their need. No cold outreach. No guesswork. The buyers are already in your network. They just have not been found yet.</p>
+        <div class="hero-btns">
+          <a href="SEC-Book-A-Call.html" class="btn-pink">Get Started &rarr;</a>
+          <a href="https://calendly.com/oneaway/eclub" class="btn-outline" target="_blank">Book a Call</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-top">
+          <div class="label">What the Sprint delivers</div>
+          <h4>30 qualified prospects per day. Each one built from their actual data.</h4>
+        </div>
+        <div class="hero-card-body">
+          <div class="hero-stat">
+            <div class="hero-stat-num">~900</div>
+            <div class="hero-stat-label">prospects activated per month</div>
+          </div>
+          <ul class="mini-list">
+            <li><span class="ck">&#10003;</span> Personalised value piece per prospect</li>
+            <li><span class="ck">&#10003;</span> Ranked ICP score with buyer signal notes</li>
+            <li><span class="ck">&#10003;</span> Ready-to-send DM passing The Grid test</li>
+            <li><span class="ck">&#10003;</span> Conversation strategy brief per person</li>
+            <li><span class="ck">&#10003;</span> Built entirely from your 1st degree connections CSV</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div><div class="stat-num">30/day</div><div class="stat-label">Prospects activated daily</div></div>
+      <div><div class="stat-num">~900</div><div class="stat-label">Per month, full package each</div></div>
+      <div><div class="stat-num">15–35%</div><div class="stat-label">Warm-network reply rate</div></div>
+      <div><div class="stat-num">$1,000</div><div class="stat-label">Per month · No lock-in</div></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="wrap">
+    <div class="problem-grid">
+
+      <div>
+        <span class="section-tag">The Actual Problem</span>
+        <h2>You do not have a reach problem.<br><span class="grad-text">You have an identification problem.</span></h2>
+        <div class="body-text">
+          <p>When business owners come to us, they say one of two things.</p>
+          <p>The first: "I need to grow my following before I can do real outreach."</p>
+          <p>The second: "I have tried DMing people. It felt awkward and I stopped."</p>
+          <p>Both are symptoms of the same misdiagnosis. The buyers are not somewhere else. They are already connected to you. You just have not identified them properly.</p>
+          <p>Your LinkedIn connections list is full of people who already know your name. Some follow your content. A few have seen you speak. They trust you enough to have connected. What nobody has done is go through that list, run it against your ICP, score each person for fit, and surface who is actually a buyer right now. That is what we do.</p>
+          <p><strong>The problem is not your confidence or your copy. The problem is that identifying and reaching the right people inside a list of thousands is a research job at scale.</strong> And research at that scale is not a human job.</p>
+        </div>
+      </div>
+
+      <div>
+        <div style="background:var(--pink-bg); border:1.5px solid var(--pink-light); border-radius:var(--radius); padding:32px; margin-bottom:20px;">
+          <div style="font-size:12px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:var(--pink); margin-bottom:18px;">&#10007; &nbsp;What is actually happening</div>
+          <div style="display:flex; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid rgba(194,24,91,0.1); font-size:15px; font-weight:600; color:var(--text);">
+            <span style="color:var(--pink);">&#10007;</span> You know clients are in your network. Nobody has looked.
+          </div>
+          <div style="display:flex; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid rgba(194,24,91,0.1); font-size:15px; font-weight:600; color:var(--text);">
+            <span style="color:var(--pink);">&#10007;</span> Outreach felt awkward. You stopped.
+          </div>
+          <div style="display:flex; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid rgba(194,24,91,0.1); font-size:15px; font-weight:600; color:var(--text);">
+            <span style="color:var(--pink);">&#10007;</span> DMs you sent were "good enough to get ignored politely."
+          </div>
+          <div style="display:flex; align-items:flex-start; gap:12px; padding:12px 0; font-size:15px; font-weight:600; color:var(--text);">
+            <span style="color:var(--pink);">&#10007;</span> Pipeline still depends on referrals and timing you cannot control.
+          </div>
+        </div>
+
+        <div style="background:var(--teal); border-radius:var(--radius); padding:32px;">
+          <div style="font-size:12px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.6); margin-bottom:18px;">&#10003; &nbsp;After the Sprint</div>
+          <div style="display:flex; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.12); font-size:15px; font-weight:600; color:rgba(255,255,255,0.9);">
+            <span style="color:#81E8C3;">&#10003;</span> 30 prospects identified, scored, and packaged daily.
+          </div>
+          <div style="display:flex; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.12); font-size:15px; font-weight:600; color:rgba(255,255,255,0.9);">
+            <span style="color:#81E8C3;">&#10003;</span> Every DM built from that person's actual data.
+          </div>
+          <div style="display:flex; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.12); font-size:15px; font-weight:600; color:rgba(255,255,255,0.9);">
+            <span style="color:#81E8C3;">&#10003;</span> Passes the three-gate brain scan in one hundred milliseconds.
+          </div>
+          <div style="display:flex; align-items:flex-start; gap:12px; padding:12px 0; font-size:15px; font-weight:600; color:rgba(255,255,255,0.9);">
+            <span style="color:#81E8C3;">&#10003;</span> Structured outreach operation. Not referrals. Not luck.
+          </div>
+          <div style="margin-top:18px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.15); font-size:15px; font-style:italic; font-weight:700; color:rgba(255,255,255,0.8);">The intelligence layer is automated. The relationship is still yours.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <span class="cliff">That is what changed. Research at scale is not a human job anymore. And fixing it is not a posting problem. It is not a confidence problem. It is not even an outreach problem.</span>
+
+  </div>
+</section>
+
+
+<!-- SCIENCE -->
+<section class="dot-bg">
+  <div class="wrap-narrow">
+
+    <span class="section-tag">Why Most Outreach Dies in One Second</span>
+    <h2>Your prospect decides in one-tenth of a second. Before they read anything you wrote.</h2>
+
+    <div class="body-text">
+      <p>Princeton researchers proved in 2006 that trust decisions happen before conscious thought engages. When someone opens your DM, their brain runs three checks in sequence. In one hundred milliseconds. Before the first sentence is finished.</p>
+    </div>
+
+    <div class="gates-grid">
+      <div class="gate-card">
+        <div class="gate-num-badge">1</div>
+        <h4>Is this real?</h4>
+        <p>Not a bot. Not a script sent to four hundred people. Not VA Spam with a name merged in.</p>
+      </div>
+      <div class="gate-card">
+        <div class="gate-num-badge">2</div>
+        <h4>Is this for me?</h4>
+        <p>Not something that could have been sent to everyone who shares a job title. Something that knows something about this specific person.</p>
+      </div>
+      <div class="gate-card">
+        <div class="gate-num-badge">3</div>
+        <h4>Is this safe?</h4>
+        <p>Is this person about to extract something from me? Is there pressure coming? Do I want to engage with this?</p>
+      </div>
+    </div>
+
+    <div class="body-text">
+      <p>Fail any one of those and the message is dead. They did not get to your credentials. They did not see your proof. They did not read your offer. None of it mattered because they were already gone.</p>
+      <p><strong>The only thing that passes all three gates is a message specific enough that it could only have been written for that one person.</strong> Not a template with their name merged in. A message that knows something about their actual situation that only someone who paid real attention would know.</p>
+    </div>
+
+    <div class="pull-quote">
+      <p>The best DMs in the world share one trait: they could only have been written for one person. That is not a creative talent. It is a research problem. And research problems have engineering solutions.</p>
+    </div>
+
+    <span class="cliff">That level of specificity used to require forty-five minutes of research per person. That is exactly what the Sprint solves.</span>
+
+  </div>
+</section>
+
+
+<!-- THE SPRINT -->
+<section id="sprint">
+  <div class="wrap">
+
+    <div style="text-align:center; max-width:640px; margin:0 auto 12px;">
+      <span class="section-tag">The System</span>
+      <h2>The LinkedIn Pipeline Activation Sprint.</h2>
+      <p style="color:var(--muted); font-size:17px; line-height:1.8;">Every day, the Sprint processes thirty qualified prospects through a full intelligence and outreach pipeline. Each one is ranked by ICP fit. Each one receives three things built from their actual data. Not from a template.</p>
+    </div>
+
+    <!-- INTELLIGENCE LAYER EXPLANATION -->
+    <div class="intel-box">
+      <h4>Before the Sprint touches a single prospect, we build your intelligence foundation.</h4>
+      <p>It starts with onboarding. We learn your ICP at a depth most people never describe to anyone. Not just industry and job title. The specific frustration that drives your best clients to seek you out. The language they use when they finally admit they need help. The result they are privately measuring themselves against at the end of each month.</p>
+      <p>From that, we build your Sprint intelligence files. A structured set of documents the system reads before it processes a single name on your list.</p>
+
+      <div class="intel-files">
+        <div class="intel-file">
+          <div class="intel-file-name">icp-profile.md</div>
+          <div class="intel-file-desc">Your ranked ideal client profile: role signals, industry signals, language patterns, the problem they carry</div>
+        </div>
+        <div class="intel-file">
+          <div class="intel-file-name">offer-positioning.md</div>
+          <div class="intel-file-desc">Your mechanism, your proof points, the specific angle most relevant to each ICP segment</div>
+        </div>
+        <div class="intel-file">
+          <div class="intel-file-name">voice-guide.md</div>
+          <div class="intel-file-desc">How you communicate, what you would never say, the tone that is distinctly yours</div>
+        </div>
+        <div class="intel-file">
+          <div class="intel-file-name">icp-language.md</div>
+          <div class="intel-file-desc">The exact words and phrases your ideal client uses privately. The sentences they think but rarely say out loud.</div>
+        </div>
+      </div>
+
+      <p>Every day, the Sprint runs thirty prospects through those files using Claude and LLM-powered intelligence. For each one: LinkedIn profile data, recent activity, company signals, role signals. Claude cross-references all of it against your ICP profile, scores the fit, and generates three things. Not a template with a name merged in. Output built from that person's actual data, in your voice, filtered through the intelligence of who you are actually trying to reach.</p>
+      <p>That is what the intelligence layer means. That is why it does not feel like outreach when it lands.</p>
+    </div>
+    <!-- CLAUDE + LLM SEO SECTION -->
+    <div class="intel-box" style="margin-top:32px; border-left-color: var(--teal);">
+      <h4>Built on Claude, Claude Code, and Claude Cowork.</h4>
+      <p>The Pipeline Sprint is not just an outreach service. It is an AI-powered intelligence system. The backbone is Claude — Anthropic's large language model. Every prospect analysis, every ICP fit score, every personalised DM is generated by Claude processing your intelligence files against real LinkedIn data.</p>
+      <p>Claude Cowork handles the file-based intelligence layer. Your <code>icp-profile.md</code>, <code>offer-positioning.md</code>, <code>voice-guide.md</code>, and <code>icp-language.md</code> files are loaded into Claude Cowork at the start of every session. Claude reads them the way a senior strategist would read a briefing. Not as keywords. As context. The result is outreach that sounds like it was written by someone who actually knows your business — because the LLM that wrote it does.</p>
+      <p>Claude Code runs the automation layer. Batch processing, data extraction, scoring logic, file generation. Every piece of the pipeline that would take hours manually is handled by Claude Code running in the background. This is what makes 30 personalised prospects per day possible at a price point that works for service businesses.</p>
+      <p>If you want to understand the tools powering this system, or learn to run a version of it yourself, the Custom AI Training engagement on the Revenue Accelerator page covers exactly that.</p>
+    </div>
+
+
+    <div class="deliverables-grid">
+
+      <div class="deliv-card">
+        <div class="deliv-card-top">
+          <span class="deliv-num">Deliverable 01</span>
+          <h4>A personalised value piece. Finished. Delivered before they have agreed to anything.</h4>
+        </div>
+        <div class="deliv-card-body">
+          <p>Not a teaser. Not a promise of what you could do. The complete thing, built from what we learn about their specific situation. A revenue coach's prospect gets a conversion gap diagnosis tailored to their pipeline. A consultant's prospect gets a named bottleneck in their business architecture. An executive recruiter's prospect gets a hiring language insight drawn from how their industry is actually searching for talent right now. The piece is generated from the prospect's data. Not interpolated from a template with their company name filled in.</p>
+        </div>
+      </div>
+
+      <div class="deliv-card">
+        <div class="deliv-card-top">
+          <span class="deliv-num">Deliverable 02</span>
+          <h4>A ready-to-send DM built on a seven-move architecture. Every move is there for a reason.</h4>
+        </div>
+        <div class="deliv-card-body">
+          <p>Tribal recognition that signals you have been inside their world. Honest naming that disarms the pitch alarm before it fires. Specificity in their own language that proves you actually looked. Inside-world proof they can verify without having to trust you first. The problem they have but have not named yet, identified and solved. The value piece delivered finished. A permission close that gives them full freedom to say no. Which is the only thing that makes yes mean anything. Every DM passes The Grid test: specific enough for one person, personal enough for one person.</p>
+        </div>
+      </div>
+
+      <div class="deliv-card">
+        <div class="deliv-card-top">
+          <span class="deliv-num">Deliverable 03</span>
+          <h4>A conversation strategy brief. What to say when they reply.</h4>
+        </div>
+        <div class="deliv-card-body">
+          <p>The angle to lead with. What is happening in their business right now that makes this timely. What the second move is when they respond. This is the brief that turns a conversation opener into a qualified opportunity. Because opening the conversation is only half of it.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <span class="cliff">Thirty people every day. Each one already convinced this message was written only for them. Because it was.</span>
+
+  </div>
+</section>
+
+
+<!-- YOUR NETWORK -->
+<section id="pools">
+  <div class="wrap">
+
+    <span class="section-tag">Where the Prospects Come From</span>
+    <h2>Your 1st degree connections.<br><span class="grad-text">The most underactivated asset you own.</span></h2>
+    <p style="color:var(--muted); font-size:17px; margin-bottom:36px;">Every person who has ever connected with you on LinkedIn already knows your name. Some follow your content. A few have heard you speak. They trust you enough to have accepted a connection. None of them know you have an active offer right now. Nobody has ever gone through that list and told you which ones are your buyers.</p>
+
+    <div class="intel-box" style="margin: 0 0 32px 0;">
+      <h4>Here is exactly how it works.</h4>
+      <p>You export your LinkedIn connections as a CSV file and send it to us. That is your starting point. Not a cold database. Not a scraped list. The actual people who chose to connect with you.</p>
+      <p>We run that file through your ICP profile. Every connection is scored against the specific signals that define your ideal client: role, industry, company stage, activity patterns, language signals. The system surfaces who fits, ranks them by ICP score, and builds full personalized outreach packages for each one. Thirty per day.</p>
+      <p>If you have a separate lead list CSV you want us to run, it works on one condition: the contacts must be your LinkedIn 1st degree connections. The entire system is built on warm network logic. These are people who already trust you. That trust is the edge. We do not throw it away by reaching into cold territory.</p>
+    </div>
+
+    <div class="pools-grid">
+      <div class="pool-card warm">
+        <span class="pool-badge">Your LinkedIn Export</span>
+        <h4>Your connections CSV. Everything starts here.</h4>
+        <p>Go to LinkedIn Settings, export your connections as a CSV, and send it to us. That is the full list. We score every connection against your ICP, identify who fits, and build personalized outreach for each qualifying person. The more connections you have, the longer your pipeline runs. Most active business owners have 500 to 3,000 connections. A 25 to 50 percent ICP filter on 2,000 connections produces 500 to 1,000 qualified profiles. Enough for months of daily batches without touching the same person twice.</p>
+      </div>
+      <div class="pool-card" style="background:var(--bg-soft); border-color:var(--border);">
+        <span class="pool-badge" style="background:var(--navy); color:#fff;">Pool Refresh</span>
+        <h4>When your original list is fully worked through.</h4>
+        <p>If your original connections list has been exhausted, we can configure a fresh ICP segment or work with a new batch of connections as your network grows. If you provide a separate lead list CSV, it must contain your LinkedIn 1st degree connections only. Not cold contacts. Not scraped leads. The same warm network standard applies. The trust your connections have extended to you is the reason this works. Every prospect we reach has already decided you are worth knowing.</p>
+      </div>
+    </div>
+
+    <span class="cliff">Most business owners have been sitting on hundreds of warm buyers they have never properly identified. The CSV is where it starts.</span>
+
+  </div>
+</section>
+
+
+<!-- WHO IT'S FOR -->
+<section id="who" class="dot-bg">
+  <div class="wrap">
+
+    <span class="section-tag">Qualification</span>
+    <h2>This is not for everyone.<br>Here is how to know which side you are on.</h2>
+    <p style="color:var(--muted); font-size:17px; margin-bottom:0; max-width:640px;">The Sprint is for business owners and service professionals. Coaches, consultants, agencies, B2B service businesses. Who have a real offer, a defined client, and a pipeline that still depends too much on referrals and timing they cannot control.</p>
+
+    <div class="who-grid">
+      <div class="qual-box yes">
+        <div class="qual-box-header">&#10003; &nbsp;This is for you if</div>
+        <div class="qual-item"><span class="qual-icon">&#10003;</span> You have a validated offer. Past clients. A real result you have delivered. The Sprint activates existing demand. It cannot manufacture it where none exists.</div>
+        <div class="qual-item"><span class="qual-icon">&#10003;</span> You can export your LinkedIn connections as a CSV and send them to us. The Sprint filters your ICP from your 1st degree network. That is the only prospect source the system runs on.</div>
+        <div class="qual-item"><span class="qual-icon">&#10003;</span> Your pipeline is too dependent on referrals or content virality. Revenue feels unpredictable because no structured outreach operation exists yet.</div>
+        <div class="qual-item"><span class="qual-icon">&#10003;</span> You want a fully done-for-you engagement. Not a tool to manage yourself. Not a sequence to build. The output arrives. You send.</div>
+      </div>
+
+      <div class="qual-box no">
+        <div class="qual-box-header">&#10007; &nbsp;This is not for you if</div>
+        <div class="qual-item"><span class="qual-icon">&#10007;</span> You do not have a validated offer with past clients. The pipeline scores for buyer fit. It cannot score for demand that does not exist yet.</div>
+        <div class="qual-item"><span class="qual-icon">&#10007;</span> You want mass volume automation. Thirty per day is a deliberate limit. Not a ceiling to push through. The entire model depends on specificity, not scale.</div>
+        <div class="qual-item"><span class="qual-icon">&#10007;</span> You want to manage the outreach tool yourself. This is fully done for you. If you want to own the process, this is not the right engagement.</div>
+      </div>
+    </div>
+
+    <span class="cliff">If your offer is real and your network is real, the only thing missing is the intelligence layer that tells you who to talk to and exactly what to say.</span>
+
+  </div>
+</section>
+
+
+<!-- WHY NOW -->
+<section id="timing">
+  <div class="wrap-narrow">
+
+    <span class="section-tag">The Timing</span>
+    <h2>The window for warm-network outreach is still open. It will not stay open indefinitely.</h2>
+
+    <div class="body-text">
+      <p>LinkedIn's organic reach is contracting. Cold outreach reply rates are falling faster than at any point in the last five years. AI-generated messages are saturating inboxes to the point where people make triage decisions before finishing the first line.</p>
+      <p>The business owners winning on outbound right now are working inside existing relationships, not broadcasting louder to strangers.</p>
+      <p>Your warm network. The 300, 500, 800 people who already know your name. Is still a high-trust asset. Most of them do not know you have an active offer. A message that proves you understand their world specifically will land in a completely different environment from anything competing in the cold outreach channel.</p>
+      <p><strong>As AI continues flooding the cold channel, the value of warm, specific, intelligent outreach will compound. The Sprint activates the asset you already have before the environment gets harder.</strong></p>
+      <p>Every week without activating your network is another week of pipeline sitting dormant inside a connection list full of people who already trust you. The opportunity cost is real. It is just invisible. Which is exactly what makes it easy to ignore.</p>
+    </div>
+
+    <span class="cliff">Most business owners are one conversation away from their next client. The system finds that conversation.</span>
+
+  </div>
+</section>
+
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="wrap">
+
+    <div style="text-align:center; max-width:600px; margin:0 auto 52px;">
+      <span class="section-tag">Investment</span>
+      <h2>Month to month. No lock-in beyond the current month.</h2>
+    </div>
+
+    <div class="price-hero">
+      <h3>LinkedIn Pipeline Activation Sprint</h3>
+      <div class="amount">$1,000</div>
+      <div class="period">per month &nbsp;&middot;&nbsp; no contract</div>
+      <p>30 qualified prospects activated every day. ~900 per month. Full intelligence package per person. Personalised value piece, ranked ICP score, and a ready-to-send DM that passes The Grid test.</p>
+    </div>
+
+    <div class="price-includes">
+      <div class="pi-card">
+        <span class="icon">&#127775;</span>
+        <h4 style="font-size:15px; margin-bottom:6px;">Personalised value piece</h4>
+        <p>Finished insight built from their data. Delivered before they have agreed to anything.</p>
+      </div>
+      <div class="pi-card">
+        <span class="icon">&#128172;</span>
+        <h4 style="font-size:15px; margin-bottom:6px;">Ready-to-send DM</h4>
+        <p>7-move architecture. Passes all three gates. Specific enough for one person only.</p>
+      </div>
+      <div class="pi-card">
+        <span class="icon">&#128203;</span>
+        <h4 style="font-size:15px; margin-bottom:6px;">Conversation strategy brief</h4>
+        <p>What angle to lead with. What to say when they reply. Turns opener into opportunity.</p>
+      </div>
+    </div>
+
+    <div class="body-text" style="margin-bottom:36px;">
+      <p>At the end of month one, we review results together. Reply rate, ICP fit quality, conversation quality. And either continue with the same targeting or sharpen the ICP definition for month two.</p>
+      <p>If your offer is $3,000, one closed client covers three months. If your offer is $10,000, one closed client covers ten. These are projections, not guarantees. Actual results depend on your offer quality, ICP definition, and network composition. What we guarantee is the output: a ranked, scored, outreach-ready prospect list with a personalised value piece and a DM that passes The Grid test for every person on it.</p>
+    </div>
+
+    <span class="tiers-label">Full pipeline management. Optional add-ons</span>
+    <p style="color:var(--muted); font-size:15px; margin-bottom:24px;">You decide how much to hand off. Tier 1 is default. You receive the package and send yourself.</p>
+
+    <div class="tier-cards">
+      <div class="tier-card featured">
+        <div class="t-num">Tier 1</div>
+        <h4>Activation Only</h4>
+        <div class="t-price">Included</div>
+        <p>Full outreach package delivered. You send, you manage replies.</p>
+      </div>
+      <div class="tier-card">
+        <div class="t-num">Tier 2</div>
+        <h4>Managed Sending</h4>
+        <div class="t-price">+$400/mo</div>
+        <p>We send all DMs on your behalf. LinkedIn risk managed.</p>
+      </div>
+      <div class="tier-card">
+        <div class="t-num">Tier 3</div>
+        <h4>Full Inbox Management</h4>
+        <div class="t-price">+$700/mo</div>
+        <p>Everything in Tier 2 plus reply drafts within 24 hours.</p>
+      </div>
+      <div class="tier-card">
+        <div class="t-num">Tier 4</div>
+        <h4>Full Pipeline Delegation</h4>
+        <div class="t-price">+$1,200/mo</div>
+        <p>Everything in Tier 3. You show up to discovery calls.</p>
+      </div>
+      <div class="tier-card">
+        <div class="t-num">Tier 5</div>
+        <h4>Fresh ICP Expansion</h4>
+        <div class="t-price">+$300/mo</div>
+        <p>New segment configured when original pool is exhausted.</p>
+      </div>
+    </div>
+
+    <div class="projections">
+      <div class="proj-header">
+        <span>What the numbers look like</span>
+        <span>Projected range. Warm network</span>
+      </div>
+      <div class="proj-row"><span class="proj-label">Profiles processed per month</span><span class="proj-val">~900</span></div>
+      <div class="proj-row"><span class="proj-label">Pass ICP filter (25–50%)</span><span class="proj-val">225–450</span></div>
+      <div class="proj-row"><span class="proj-label">Receive personalised outreach</span><span class="proj-val">90–180</span></div>
+      <div class="proj-row"><span class="proj-label">Replies received (15–35% reply rate)</span><span class="proj-val">14–63</span></div>
+      <div class="proj-row"><span class="proj-label">Qualified conversations opened</span><span class="proj-val">4–12</span></div>
+      <div class="proj-row highlight"><span class="proj-label"><strong>New clients per month (25% close rate)</strong></span><span class="proj-val">1–3</span></div>
+    </div>
+
+    <div class="body-text">
+      <p>These are projections based on observed warm-network reply rates. Not guarantees. Your results depend on your offer, your ICP definition, and your network composition. The projections are here because you deserve a real sense of what this produces before you decide. Not a vague promise and a blank invoice.</p>
+    </div>
+
+    <span class="cliff">The investment is $1,000. The question is what one closed client from your existing network is worth to you.</span>
+
+  </div>
+</section>
+
+
+<!-- CTA BANNER -->
+<section id="cta">
+  <div class="wrap">
+    <h2>Your next five clients are already connected to you on LinkedIn.<br>Most business owners never find them.</h2>
+    <p class="sub">This is the system that does.</p>
+    <div class="cta-btns">
+      <a href="SEC-Book-A-Call.html" class="btn-white">Get Started &rarr;</a>
+      <a href="https://calendly.com/oneaway/eclub" class="btn-ghost" target="_blank">Book a Call</a>
+    </div>
+    <div class="cta-note">Month to month &nbsp;&middot;&nbsp; No lock-in &nbsp;&middot;&nbsp; Cancel anytime</div>
+    <div class="phone-row" style="margin-top:14px;"><div class="phone-item"><a href="tel:+16474741661">1-647-474-1661</a><small>Canada</small></div><div class="phone-item"><a href="tel:+15263657222">1-526-365-7222</a><small>United States</small></div></div>
+  </div>
+</section>
+
+
+<!-- ABOUT + CONTACT SECTION -->
+<div id="about" style="background:#0d0d24; padding:64px 40px; text-align:center; border-top:1px solid rgba(255,255,255,0.08);">
+  <div style="max-width:660px; margin:0 auto;">
+    <div style="font-size:11px; font-weight:900; letter-spacing:2.5px; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-bottom:16px;">About Us</div>
+    <h3 style="font-size:27px; font-weight:900; color:#fff; letter-spacing:-0.5px; margin-bottom:18px;">Sales Edge Creators</h3>
+    <p style="color:rgba(255,255,255,0.55); font-size:15px; line-height:1.9; margin-bottom:32px;">Sales Edge Creators is a LinkedIn revenue system built by Lincoln Anthony. Every offer is built around one idea: the buyers you need are already connected to you. The system finds them, positions you precisely, and builds outreach that actually lands. Every tool in our stack runs on Claude, Claude Cowork, and Claude Code.</p>
+    <a href="https://www.linkedin.com/in/lincoln-anthony-hol/" target="_blank" style="display:inline-flex; align-items:center; gap:10px; background:rgba(255,255,255,0.07); border:1.5px solid rgba(255,255,255,0.18); border-radius:50px; padding:13px 26px; text-decoration:none; color:#fff; font-weight:800; font-size:14px; letter-spacing:-0.2px;">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      Connect with Lincoln Anthony on LinkedIn
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-logo">Sales Edge <span>Creators</span></div>
+  <p style="margin-bottom:12px;">LinkedIn Pipeline Activation Sprint</p>
+  <div class="phone-row" style="margin:10px 0;"><div class="phone-item"><a href="tel:+16474741661">1-647-474-1661</a><small>Canada</small></div><div class="phone-item"><a href="tel:+15263657222">1-526-365-7222</a><small>United States</small></div></div>
+  <p style="margin-top:14px;color:rgba(255,255,255,0.22);font-size:11px;">A Hanh Consulting Inc Company &nbsp;&#183;&nbsp; Built with Claude Code</p>
+</footer>
+
+</body>
+</html>
