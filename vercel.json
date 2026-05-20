@@ -2,9 +2,9 @@
   "version": 2,
   "name": "sales-edge-creators",
   "routes": [
-    { "src": "/",           "dest": "/SEC-Revenue-Accelerator-Landing.html" },
-    { "src": "/accelerator","dest": "/SEC-Revenue-Accelerator-Landing.html" },
-    { "src": "/sprint",     "dest": "/SEC-Pipeline-Sprint-Landing.html" },
-    { "src": "/book",       "dest": "/SEC-Book-A-Call.html" }
+    { "src": "/",                    "dest": "/SEC-Revenue-Accelerator-Landing.html" },
+    { "src": "/revenue-accelerator", "dest": "/SEC-Revenue-Accelerator-Landing.html" },
+    { "src": "/activation-sprint",   "dest": "/SEC-Pipeline-Sprint-Landing.html" },
+    { "src": "/sales-edge-book",     "dest": "/SEC-Book-A-Call.html" }
   ]
 }
