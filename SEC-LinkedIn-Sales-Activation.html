@@ -67,7 +67,7 @@
     .offer-bar-sub { font-size: 12px; color: rgba(255,255,255,0.5); font-weight: 600; margin-top: 2px; }
 
     /* ── JUMP NAV ── */
-    .jump-nav { background: #faf8ff; border-bottom: 2px solid #e0d8f0; padding: 0 20px; display: flex; align-items: center; gap: 6px; overflow-x: auto; scrollbar-width: none; height: 56px; }
+    .jump-nav { position: sticky; top: 68px; z-index: 99; background: #faf8ff; border-bottom: 2px solid #e0d8f0; padding: 0 20px; display: flex; align-items: center; gap: 6px; overflow-x: auto; scrollbar-width: none; height: 56px; }
     .jump-nav::-webkit-scrollbar { display: none; }
     .jump-nav a { font-size: 13px; font-weight: 800; color: var(--navy); text-decoration: none; white-space: nowrap; padding: 7px 16px; border-radius: 50px; border: 1.5px solid #d4cbe8; background: #fff; transition: background 0.15s, color 0.15s, border-color 0.15s; }
     .jump-nav a:hover { background: var(--pink); color: #fff; border-color: var(--pink); }
@@ -292,7 +292,7 @@
       .qualification-grid { grid-template-columns: 1fr; }
       .why-now-grid { grid-template-columns: 1fr; }
       .profile-section-row { flex-direction: column; }
-      .jump-nav { gap: 4px; }
+      .jump-nav { gap: 4px; top: 60px; }
       .jump-nav a { font-size: 11px; padding: 5px 10px; }
       .cta-pair { flex-direction: column; align-items: center; gap: 12px; }
       .section-inner { padding: 0 20px; }
